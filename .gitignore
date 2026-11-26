@@ -1,0 +1,33 @@
+# Secrets — jamais dans Git (exigence « protection des secrets »)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Artefacts lourds / générés
+maintidoc_san_extraction/
+corpus/derived/
+data/
+indices/
+mlruns/
+eval/training/
+models/
+eval/reports/
+*.npz
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Base MLflow locale (artefact déexécution)
+mlflow.db

@@ -1,0 +1,373 @@
+# Genere par `python -m maintidoc.synth`. Les entrees hors generateur
+# (manuel SAN-LAB 2000 d'origine) sont conservees en tete de liste.
+corpus_version: '2026.11'
+documents:
+- path: raw/san_lab_2000/Manuel_Maintenance_SAN_Projet_Integrateur.pdf
+  document_id: SAN-MAN-001
+  document_version: '1.1'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Manuel de maintenance SAN-LAB 2000
+  language: fr
+- path: raw/genere/san/san_2000_manuel.pdf
+  document_id: SAN-2000-MANU
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Manuel de maintenance SAN-LAB 2000
+  language: fr
+- path: raw/genere/san/san_2000_alarmes.pdf
+  document_id: SAN-2000-ALAR
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Fiche d'alarmes SAN-LAB 2000
+  language: fr
+- path: raw/genere/san/san_2000_procedure.pdf
+  document_id: SAN-2000-PROC
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Procedure de controle SAN-LAB 2000
+  language: fr
+- path: raw/genere/san/san_2000_note.pdf
+  document_id: SAN-2000-NOTE
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Note technique SAN-LAB 2000
+  language: fr
+- path: raw/genere/san/san_2200_manuel.pdf
+  document_id: SAN-2200-MANU
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Manuel de maintenance SAN-LAB 2200
+  language: fr
+- path: raw/genere/san/san_2200_alarmes.pdf
+  document_id: SAN-2200-ALAR
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Fiche d'alarmes SAN-LAB 2200
+  language: fr
+- path: raw/genere/san/san_2200_procedure.pdf
+  document_id: SAN-2200-PROC
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Procedure de controle SAN-LAB 2200
+  language: fr
+- path: raw/genere/san/san_2200_note.pdf
+  document_id: SAN-2200-NOTE
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Note technique SAN-LAB 2200
+  language: fr
+- path: raw/genere/san/san_3000_manuel.pdf
+  document_id: SAN-3000-MANU
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Manuel de maintenance SAN-LAB 3000
+  language: fr
+- path: raw/genere/san/san_3000_alarmes.pdf
+  document_id: SAN-3000-ALAR
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Fiche d'alarmes SAN-LAB 3000
+  language: fr
+- path: raw/genere/san/san_3000_procedure.pdf
+  document_id: SAN-3000-PROC
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Procedure de controle SAN-LAB 3000
+  language: fr
+- path: raw/genere/san/san_3000_note.pdf
+  document_id: SAN-3000-NOTE
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Note technique SAN-LAB 3000
+  language: fr
+- path: raw/genere/san/san_r120_manuel.pdf
+  document_id: SAN-R120-MANU
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Manuel de maintenance SAN-RACK 120
+  language: fr
+- path: raw/genere/san/san_r120_alarmes.pdf
+  document_id: SAN-R120-ALAR
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Fiche d'alarmes SAN-RACK 120
+  language: fr
+- path: raw/genere/san/san_r120_procedure.pdf
+  document_id: SAN-R120-PROC
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Procedure de controle SAN-RACK 120
+  language: fr
+- path: raw/genere/san/san_r120_note.pdf
+  document_id: SAN-R120-NOTE
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance
+  - maintenance_san
+  title: Note technique SAN-RACK 120
+  language: fr
+- path: raw/genere/san/san_r240_manuel.pdf
+  document_id: SAN-R240-MANU
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance_san
+  - responsable_maintenance
+  title: Manuel de maintenance SAN-RACK 240
+  language: fr
+- path: raw/genere/san/san_r240_alarmes.pdf
+  document_id: SAN-R240-ALAR
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance_san
+  - responsable_maintenance
+  title: Fiche d'alarmes SAN-RACK 240
+  language: fr
+- path: raw/genere/san/san_r240_procedure.pdf
+  document_id: SAN-R240-PROC
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance_san
+  - responsable_maintenance
+  title: Procedure de controle SAN-RACK 240
+  language: fr
+- path: raw/genere/san/san_r240_note.pdf
+  document_id: SAN-R240-NOTE
+  document_version: '1.0'
+  equipment_family: san
+  acl_groups:
+  - maintenance_san
+  - responsable_maintenance
+  title: Note technique SAN-RACK 240
+  language: fr
+- path: raw/genere/onduleur/ups_500_manuel.pdf
+  document_id: UPS-500-MANU
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Manuel de maintenance UPS-LAB 500
+  language: fr
+- path: raw/genere/onduleur/ups_500_alarmes.pdf
+  document_id: UPS-500-ALAR
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Fiche d'alarmes UPS-LAB 500
+  language: fr
+- path: raw/genere/onduleur/ups_500_procedure.pdf
+  document_id: UPS-500-PROC
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Procedure de controle UPS-LAB 500
+  language: fr
+- path: raw/genere/onduleur/ups_500_note.pdf
+  document_id: UPS-500-NOTE
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Note technique UPS-LAB 500
+  language: fr
+- path: raw/genere/onduleur/ups_800_manuel.pdf
+  document_id: UPS-800-MANU
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Manuel de maintenance UPS-LAB 800
+  language: fr
+- path: raw/genere/onduleur/ups_800_alarmes.pdf
+  document_id: UPS-800-ALAR
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Fiche d'alarmes UPS-LAB 800
+  language: fr
+- path: raw/genere/onduleur/ups_800_procedure.pdf
+  document_id: UPS-800-PROC
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Procedure de controle UPS-LAB 800
+  language: fr
+- path: raw/genere/onduleur/ups_800_note.pdf
+  document_id: UPS-800-NOTE
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Note technique UPS-LAB 800
+  language: fr
+- path: raw/genere/onduleur/ups_r1500_manuel.pdf
+  document_id: UPS-R1500-MANU
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance_energie
+  - responsable_maintenance
+  title: Manuel de maintenance UPS-RACK 1500
+  language: fr
+- path: raw/genere/onduleur/ups_r1500_alarmes.pdf
+  document_id: UPS-R1500-ALAR
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance_energie
+  - responsable_maintenance
+  title: Fiche d'alarmes UPS-RACK 1500
+  language: fr
+- path: raw/genere/onduleur/ups_r1500_procedure.pdf
+  document_id: UPS-R1500-PROC
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance_energie
+  - responsable_maintenance
+  title: Procedure de controle UPS-RACK 1500
+  language: fr
+- path: raw/genere/onduleur/ups_r1500_note.pdf
+  document_id: UPS-R1500-NOTE
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance_energie
+  - responsable_maintenance
+  title: Note technique UPS-RACK 1500
+  language: fr
+- path: raw/genere/onduleur/ups_r3000_manuel.pdf
+  document_id: UPS-R3000-MANU
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Manuel de maintenance UPS-RACK 3000
+  language: fr
+- path: raw/genere/onduleur/ups_r3000_alarmes.pdf
+  document_id: UPS-R3000-ALAR
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Fiche d'alarmes UPS-RACK 3000
+  language: fr
+- path: raw/genere/onduleur/ups_r3000_procedure.pdf
+  document_id: UPS-R3000-PROC
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Procedure de controle UPS-RACK 3000
+  language: fr
+- path: raw/genere/onduleur/ups_r3000_note.pdf
+  document_id: UPS-R3000-NOTE
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Note technique UPS-RACK 3000
+  language: fr
+- path: raw/genere/onduleur/ond_300_manuel.pdf
+  document_id: OND-300-MANU
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Manuel de maintenance ONDULEUR-LAB 300
+  language: fr
+- path: raw/genere/onduleur/ond_300_alarmes.pdf
+  document_id: OND-300-ALAR
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Fiche d'alarmes ONDULEUR-LAB 300
+  language: fr
+- path: raw/genere/onduleur/ond_300_procedure.pdf
+  document_id: OND-300-PROC
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Procedure de controle ONDULEUR-LAB 300
+  language: fr
+- path: raw/genere/onduleur/ond_300_note.pdf
+  document_id: OND-300-NOTE
+  document_version: '1.0'
+  equipment_family: onduleur
+  acl_groups:
+  - maintenance
+  - maintenance_energie
+  title: Note technique ONDULEUR-LAB 300
+  language: fr

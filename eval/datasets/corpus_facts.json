@@ -1,0 +1,722 @@
+[
+  {
+    "document_id": "SAN-2000-MANU",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur SAN-LAB 2000",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-2000-MANU",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur SAN-LAB 2000",
+    "expected": "avertissement thermique sur le controleur A"
+  },
+  {
+    "document_id": "SAN-2000-MANU",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange clignotant sur SAN-LAB 2000",
+    "expected": "groupe de disques en mode degrade"
+  },
+  {
+    "document_id": "SAN-2000-MANU",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur SAN-LAB 2000",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-2000-ALAR",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur SAN-LAB 2000",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-2000-ALAR",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-LAB 2000",
+    "expected": "avertissement thermique sur le controleur A"
+  },
+  {
+    "document_id": "SAN-2000-ALAR",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange clignotant sur SAN-LAB 2000",
+    "expected": "groupe de disques en mode degrade"
+  },
+  {
+    "document_id": "SAN-2000-ALAR",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur SAN-LAB 2000",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-2000-NOTE",
+    "model": "SAN-LAB 2000",
+    "family": "san",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-LAB 2000",
+    "expected": "avertissement thermique sur le controleur A"
+  },
+  {
+    "document_id": "SAN-2200-MANU",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur SAN-LAB 2200",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-2200-MANU",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur SAN-LAB 2200",
+    "expected": "reconstruction du groupe de disques en cours"
+  },
+  {
+    "document_id": "SAN-2200-MANU",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant bleu clignotant sur SAN-LAB 2200",
+    "expected": "module de cache en cours de synchronisation"
+  },
+  {
+    "document_id": "SAN-2200-MANU",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur SAN-LAB 2200",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-2200-ALAR",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur SAN-LAB 2200",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-2200-ALAR",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-LAB 2200",
+    "expected": "reconstruction du groupe de disques en cours"
+  },
+  {
+    "document_id": "SAN-2200-ALAR",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant bleu clignotant sur SAN-LAB 2200",
+    "expected": "module de cache en cours de synchronisation"
+  },
+  {
+    "document_id": "SAN-2200-ALAR",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur SAN-LAB 2200",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-2200-NOTE",
+    "model": "SAN-LAB 2200",
+    "family": "san",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-LAB 2200",
+    "expected": "reconstruction du groupe de disques en cours"
+  },
+  {
+    "document_id": "SAN-3000-MANU",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur SAN-LAB 3000",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-3000-MANU",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur SAN-LAB 3000",
+    "expected": "chemin Fibre Channel degrade sur une fabric"
+  },
+  {
+    "document_id": "SAN-3000-MANU",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange clignotant sur SAN-LAB 3000",
+    "expected": "micrologiciel en cours de mise a jour"
+  },
+  {
+    "document_id": "SAN-3000-MANU",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur SAN-LAB 3000",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-3000-ALAR",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur SAN-LAB 3000",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-3000-ALAR",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-LAB 3000",
+    "expected": "chemin Fibre Channel degrade sur une fabric"
+  },
+  {
+    "document_id": "SAN-3000-ALAR",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange clignotant sur SAN-LAB 3000",
+    "expected": "micrologiciel en cours de mise a jour"
+  },
+  {
+    "document_id": "SAN-3000-ALAR",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur SAN-LAB 3000",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-3000-NOTE",
+    "model": "SAN-LAB 3000",
+    "family": "san",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-LAB 3000",
+    "expected": "chemin Fibre Channel degrade sur une fabric"
+  },
+  {
+    "document_id": "SAN-R120-MANU",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur SAN-RACK 120",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-R120-MANU",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur SAN-RACK 120",
+    "expected": "alimentation redondante indisponible"
+  },
+  {
+    "document_id": "SAN-R120-MANU",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur SAN-RACK 120",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-R120-ALAR",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur SAN-RACK 120",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-R120-ALAR",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-RACK 120",
+    "expected": "alimentation redondante indisponible"
+  },
+  {
+    "document_id": "SAN-R120-ALAR",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur SAN-RACK 120",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-R120-NOTE",
+    "model": "SAN-RACK 120",
+    "family": "san",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-RACK 120",
+    "expected": "alimentation redondante indisponible"
+  },
+  {
+    "document_id": "SAN-R240-MANU",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur SAN-RACK 240",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-R240-MANU",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur SAN-RACK 240",
+    "expected": "micrologiciel en attente de validation"
+  },
+  {
+    "document_id": "SAN-R240-MANU",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur SAN-RACK 240",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-R240-ALAR",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur SAN-RACK 240",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "SAN-R240-ALAR",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-RACK 240",
+    "expected": "micrologiciel en attente de validation"
+  },
+  {
+    "document_id": "SAN-R240-ALAR",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur SAN-RACK 240",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "SAN-R240-NOTE",
+    "model": "SAN-RACK 240",
+    "family": "san",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur SAN-RACK 240",
+    "expected": "micrologiciel en attente de validation"
+  },
+  {
+    "document_id": "UPS-500-MANU",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur UPS-LAB 500",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-500-MANU",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur UPS-LAB 500",
+    "expected": "fonctionnement sur batterie, reseau absent"
+  },
+  {
+    "document_id": "UPS-500-MANU",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange clignotant sur UPS-LAB 500",
+    "expected": "test de batterie en cours"
+  },
+  {
+    "document_id": "UPS-500-MANU",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur UPS-LAB 500",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-500-ALAR",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur UPS-LAB 500",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-500-ALAR",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-LAB 500",
+    "expected": "fonctionnement sur batterie, reseau absent"
+  },
+  {
+    "document_id": "UPS-500-ALAR",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange clignotant sur UPS-LAB 500",
+    "expected": "test de batterie en cours"
+  },
+  {
+    "document_id": "UPS-500-ALAR",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur UPS-LAB 500",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-500-NOTE",
+    "model": "UPS-LAB 500",
+    "family": "onduleur",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-LAB 500",
+    "expected": "fonctionnement sur batterie, reseau absent"
+  },
+  {
+    "document_id": "UPS-800-MANU",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur UPS-LAB 800",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-800-MANU",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur UPS-LAB 800",
+    "expected": "defaut de ventilation du module de puissance"
+  },
+  {
+    "document_id": "UPS-800-MANU",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur UPS-LAB 800",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-800-ALAR",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur UPS-LAB 800",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-800-ALAR",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-LAB 800",
+    "expected": "defaut de ventilation du module de puissance"
+  },
+  {
+    "document_id": "UPS-800-ALAR",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur UPS-LAB 800",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-800-NOTE",
+    "model": "UPS-LAB 800",
+    "family": "onduleur",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-LAB 800",
+    "expected": "defaut de ventilation du module de puissance"
+  },
+  {
+    "document_id": "UPS-R1500-MANU",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur UPS-RACK 1500",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-R1500-MANU",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur UPS-RACK 1500",
+    "expected": "batterie en fin de vie annoncee par la supervision"
+  },
+  {
+    "document_id": "UPS-R1500-MANU",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant bleu fixe sur UPS-RACK 1500",
+    "expected": "supervision reseau active"
+  },
+  {
+    "document_id": "UPS-R1500-MANU",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur UPS-RACK 1500",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-R1500-ALAR",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur UPS-RACK 1500",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-R1500-ALAR",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-RACK 1500",
+    "expected": "batterie en fin de vie annoncee par la supervision"
+  },
+  {
+    "document_id": "UPS-R1500-ALAR",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant bleu fixe sur UPS-RACK 1500",
+    "expected": "supervision reseau active"
+  },
+  {
+    "document_id": "UPS-R1500-ALAR",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur UPS-RACK 1500",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-R1500-NOTE",
+    "model": "UPS-RACK 1500",
+    "family": "onduleur",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-RACK 1500",
+    "expected": "batterie en fin de vie annoncee par la supervision"
+  },
+  {
+    "document_id": "UPS-R3000-MANU",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur UPS-RACK 3000",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-R3000-MANU",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur UPS-RACK 3000",
+    "expected": "bypass automatique actif, charge non protegee"
+  },
+  {
+    "document_id": "UPS-R3000-MANU",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur UPS-RACK 3000",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-R3000-ALAR",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur UPS-RACK 3000",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "UPS-R3000-ALAR",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-RACK 3000",
+    "expected": "bypass automatique actif, charge non protegee"
+  },
+  {
+    "document_id": "UPS-R3000-ALAR",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur UPS-RACK 3000",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "UPS-R3000-NOTE",
+    "model": "UPS-RACK 3000",
+    "family": "onduleur",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur UPS-RACK 3000",
+    "expected": "bypass automatique actif, charge non protegee"
+  },
+  {
+    "document_id": "OND-300-MANU",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant vert fixe sur ONDULEUR-LAB 300",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "OND-300-MANU",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant orange fixe sur ONDULEUR-LAB 300",
+    "expected": "surcharge de sortie detectee"
+  },
+  {
+    "document_id": "OND-300-MANU",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "manuel",
+    "page": 2,
+    "subject": "voyant rouge fixe sur ONDULEUR-LAB 300",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "OND-300-ALAR",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant vert fixe sur ONDULEUR-LAB 300",
+    "expected": "fonctionnement nominal, aucune action requise"
+  },
+  {
+    "document_id": "OND-300-ALAR",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant orange fixe sur ONDULEUR-LAB 300",
+    "expected": "surcharge de sortie detectee"
+  },
+  {
+    "document_id": "OND-300-ALAR",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "alarmes",
+    "page": 1,
+    "subject": "voyant rouge fixe sur ONDULEUR-LAB 300",
+    "expected": "defaut bloquant necessitant une intervention habilitee"
+  },
+  {
+    "document_id": "OND-300-NOTE",
+    "model": "ONDULEUR-LAB 300",
+    "family": "onduleur",
+    "kind": "note",
+    "page": 1,
+    "subject": "voyant orange fixe sur ONDULEUR-LAB 300",
+    "expected": "surcharge de sortie detectee"
+  }
+]

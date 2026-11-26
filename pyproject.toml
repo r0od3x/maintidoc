@@ -1,0 +1,58 @@
+[project]
+name = "maintidoc"
+version = "0.1.0"
+description = "MaintiDoc — assistant documentaire multimodal et agentique pour la maintenance SAN"
+requires-python = ">=3.12,<3.13"
+license = { text = "Proprietary" }
+
+# Phase 1 ne dépend que du noyau « contrats + configuration + prompts ».
+# Les dépendances lourdes (Qdrant, torch, LangGraph, MCP…) sont déclarées en
+# extras et seront figées au fil des phases 2 à 10.
+dependencies = [
+    "pydantic>=2.9,<3",
+    "pydantic-settings>=2.5,<3",
+    "pyyaml>=6.0,<7",
+]
+
+[project.optional-dependencies]
+ingestion = ["pymupdf>=1.24,<2", "pillow>=10.4,<12"]
+retrieval = ["qdrant-client>=1.11,<2", "sentence-transformers>=3.0,<6"]
+agent = ["langgraph>=0.2,<2", "langchain-core>=0.3,<2", "ollama>=0.3,<1"]
+mcp = ["mcp>=1.2,<2"]
+mlops = ["mlflow>=2.16,<4", "datasets>=3.0,<5"]
+api = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pyjwt>=2.9,<3", "python-multipart>=0.0.9,<1"]
+ui = ["streamlit>=1.38,<2", "requests>=2.32,<3"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3,<9",
+    "ruff>=0.6,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/maintidoc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+# Les tests marques `models` chargent des modeles de plusieurs centaines de
+# millions de parametres. Deux de ces modules dans un meme processus epuisent
+# la memoire de la machine de developpement : ils sont exclus par defaut et
+# lances separement, un module a la fois.
+addopts = "-m 'not models'"
+markers = [
+    "models: necessite les modeles telecharges ; lancer module par module",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+# Code du prototype, conservé comme référence et non maintenu.
+exclude = ["legacy", "notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
