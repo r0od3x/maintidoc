@@ -124,6 +124,7 @@ def run_steps() -> None:
                 [str(PY), *spec["cmd"]],
                 cwd=str(ROOT),
                 env=ENV,
+                stdin=subprocess.DEVNULL,
                 capture_output=True,
                 text=True,
                 encoding="utf-8",
