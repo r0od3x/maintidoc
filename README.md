@@ -15,7 +15,12 @@ explicite**.
 Cahier des charges : [`docs/cahier_des_charges.pdf`](docs/cahier_des_charges.pdf) ·
 Feuille de route : [`docs/ROADMAP.md`](docs/ROADMAP.md)
 
-## État : les 10 phases sont construites
+## État : 7 phases sur 10 — projet en cours
+
+Le socle documentaire est construit et testé : le corpus est ingéré et indexé,
+la récupération complète fonctionne, la génération est contrainte et ses
+citations vérifiées, et l'agent orchestre le tout avec une validation humaine
+avant toute action sensible. **Les trois dernières phases restent à faire.**
 
 | Phase | Objet | État |
 |---|---|---|
@@ -26,15 +31,26 @@ Feuille de route : [`docs/ROADMAP.md`](docs/ROADMAP.md)
 | 5 | Génération sourcée et vérification des citations | **fait** (VLM non exécuté) |
 | 6 | Serveur MCP et actions sensibles | **fait** |
 | 7 | Orchestration LangGraph et validation humaine | **fait** |
-| 8 | API, interface, authentification et RBAC | **fait** |
-| 9 | Évaluation et tests d'injection | **fait** (obéissance non mesurée) |
-| 10 | Fine-tuning du reranker, MLOps et déploiement | **fait** (entraînement non lancé) |
+| 8 | API, interface, authentification et RBAC | *à faire* |
+| 9 | Évaluation et tests d'injection | *à faire* |
+| 10 | Fine-tuning du reranker, MLOps et déploiement | *à faire* |
+
+### Ce qui vient ensuite
+
+- **Phase 8** — exposer le graphe derrière une API FastAPI (JWT, RBAC) et une
+  interface Streamlit. Aujourd'hui l'agent s'utilise en ligne de commande.
+- **Phase 9** — construire les ~150 scénarios du cahier des charges (§10) et
+  mesurer : Recall@5, nDCG@5, MRR@10, validité des citations, résistance aux
+  injections. Les défenses sont écrites ; **elles ne sont pas encore mesurées**.
+- **Phase 10** — adapter le reranker sur des négatifs difficiles (le corpus est
+  déjà construit pour cela : le *voyant orange fixe* signifie dix choses
+  différentes selon le modèle), puis MLflow, Docker Compose et livraison.
 
 ## Démarrage
 
 ```bash
 uv sync --group dev          # environnement reproductible (uv.lock)
-uv run pytest -q             # 255 tests hors modèles, ~20 s
+uv run pytest -q             # 192 tests hors modèles, ~23 s
 uv run ruff check .
 cp .env.example .env         # puis renseigner les valeurs locales
 ```
@@ -109,16 +125,9 @@ src/maintidoc/
   generation/     phase 5 : appel VLM, vérification structurelle et sémantique
   mcp_server/     phase 6 : outils MCP, approbation, idempotence, audit
   agent/          phase 7 : graphe LangGraph, budgets, interruption humaine
-  api/            phase 8 : FastAPI, JWT, RBAC
-  ui/             phase 8 : interface Streamlit (client HTTP)
-  evaluation/     phase 9 : jeu de test, métriques, injections
-  training/       phase 10 : triplets, adaptation, comparaison, MLflow
-  mcp_server/     phase 6        agent/       phase 7
-  api/ ui/        phase 8
 prompts/          answer_v1.yaml, visual_analysis_v1.yaml,
                   evidence_check_v1.yaml, ticket_draft_v1.yaml
 corpus/raw/       documents sources (manuel SAN-LAB 2000)
-eval/             jeu de test et métriques (phase 9)
 notebooks/        prototype d'origine, conservé comme référence
 legacy/           application Streamlit du prototype, gelée
 docs/             cahier des charges, feuille de route, schémas
@@ -478,169 +487,6 @@ puisque l'empreinte change, il est réapprouvé.
 Une réponse en `insufficient_evidence` ou `needs_clarification` **ne peut pas**
 donner lieu à un ticket : une affirmation que ses sources ne soutiennent pas ne
 devient pas une demande d'intervention.
-
-### API et interface
-
-```bash
-uv run python -m maintidoc.api                       # http://127.0.0.1:8000
-uv run streamlit run src/maintidoc/ui/app.py
-```
-
-| Route | Rôle |
-|---|---|
-| `POST /auth/token` | authentification, renvoie un JWT |
-| `POST /ask` | question → réponse sourcée (**202** si une approbation est requise) |
-| `POST /approve` | décision humaine sur un ticket |
-| `GET /equipment/{id}/tickets` · `/history` | outils de maintenance |
-| `GET /health` | état, et **dégradations déclarées** |
-
-JWT via PyJWT, algorithme épinglé. Les échecs classiques — `alg: none`,
-confusion HS/RS, comparaison non constante — sont ceux qu'une bibliothèque
-éprouvée traite déjà, et la sécurité est un livrable du cahier des charges.
-
-**L'identité est établie une seule fois, au bord.** Le `Principal` issu du
-jeton est la seule source de permissions de la requête ; aucun champ de corps
-revendiquant un utilisateur ou un groupe n'est lu (`extra="forbid"` les
-rejette).
-
-**L'attente d'approbation est dans le contrat HTTP** : `/ask` renvoie **202**
-et le contenu exact du ticket, jamais 200. Un client ne peut pas confondre
-« en attente d'un humain » avec « terminé ».
-
-**Les modèles sont chargés une fois, au démarrage, et partagés.** Ce n'est pas
-une optimisation : BGE-M3 et le reranker ne tiennent déjà pas ensemble en
-mémoire, et un chargement par requête échouerait à la deuxième. `Runtime.lean()`
-construit une pile complète sans aucun modèle — c'est ce que les tests
-utilisent, et ce qui permet une démonstration sur une machine modeste.
-
-L'interface Streamlit ne détient ni modèle, ni index, ni base : tout passe par
-l'API. Une interface capable d'interroger directement le retriever serait un
-contournement du contrôle d'accès.
-
-### Évaluation
-
-```bash
-uv run python -m maintidoc.evaluation build      # 150 scenarios
-uv run python -m maintidoc.evaluation run --lean # sans modeles lourds
-uv run python -m maintidoc.evaluation report
-```
-
-Le jeu de test est **construit depuis `corpus_facts.json`**, que le générateur
-émet avec la page où chaque fait a été écrit. C'est la raison d'être du corpus
-généré : la vérité de terrain est exacte et se régénère avec le corpus, au lieu
-d'être annotée à la main sur quarante documents.
-
-Répartition conforme au cahier des charges : 40 documentaires, 30 visuels,
-20 MCP, 20 sources insuffisantes, 20 contrôle d'accès, 20 injections — **150**.
-
-Les injections empruntent les **trois canaux** : texte de document, texte lu
-dans une figure (chemin OCR), et **résultat d'outil MCP** — celui qu'on oublie
-le plus souvent, alors que la sortie d'un outil atteint le contexte du modèle
-exactement comme un document.
-
-#### Ce que le rapport peut et ne peut pas conclure
-
-Mesuré directement : recherche, contrôle d'accès, **confinement** des
-injections (le texte hostile reste-t-il dans un bloc de preuve cité, au lieu
-d'atteindre le prompt système ?).
-
-Non mesuré sans modèle : l'**obéissance** à une injection, la fidélité des
-réponses, le taux de citations soutenues. Ces vérifications rapportent
-`non vérifiable`, jamais « réussi ». *Un test de sécurité qui passe parce qu'il
-n'a pas tourné est pire que pas de test.*
-
-#### Résultats (mode allégé, sans modèles)
-
-| Catégorie | Évalués | Réussis |
-|---|---|---|
-| Contrôle d'accès | 20 | **20 — aucune fuite** |
-| Confinement des injections | 20 | **20** |
-| Visuel | 28 | 28 |
-| MCP | 20 | 16 |
-| Documentaire | 40 | 27 |
-| Sources insuffisantes | 0 | non vérifiable sans générateur |
-
-Recall@5 0,43 · nDCG@5 0,27 · MRR@10 0,26 · latence p95 2 ms.
-
-> Ces chiffres de recherche sont ceux de **BM25 seul**, la branche dense étant
-> désactivée en mode allégé. Ils constituent une ligne de base honnête, pas une
-> mesure de la qualité du système complet.
-
-#### Une observation de politique d'accès
-
-Le corpus accorde un groupe partagé `maintenance` à **259 éléments sur 317**,
-les deux familles confondues. Un technicien qui le détient lit donc
-légitimement les deux familles ; seuls les documents réservés à
-`responsable_maintenance` sont réellement cloisonnés.
-
-Les scénarios de contrôle d'accès n'accordent donc **que** le groupe métier
-spécifique : inclure le groupe partagé aurait affirmé un cloisonnement que la
-politique ne revendique pas, et le test aurait échoué pour la mauvaise raison.
-Si un cloisonnement strict par famille est voulu, c'est la politique du corpus
-qu'il faut resserrer, pas l'évaluation.
-
-### Adaptation du reranker
-
-```bash
-uv run python -m maintidoc.training mine             # 910 triplets
-uv run python -m maintidoc.training train --dry-run
-uv run python -m maintidoc.training compare --lean   # trois bras
-```
-
-**910 triplets, 75 % de négatifs difficiles, aucune fuite entre splits.**
-
-Un négatif difficile est le passage d'un **autre modèle de la même famille**
-décrivant **le même indicateur** : mêmes mots, réponse différente. C'est
-exactement l'exemple du cahier des charges (§5), et c'est la raison d'être du
-corpus — le *voyant orange fixe* existe sur les dix modèles et y signifie dix
-choses distinctes.
-
-**La séparation est par modèle, jamais aléatoire.** Un découpage au hasard
-mettrait le manuel du SAN-LAB 2000 en entraînement et sa fiche d'alarmes en
-test : les deux énoncent le même fait, et le gain mesuré serait de la
-mémorisation. `train_reranker` **refuse** de démarrer sur un split qui fuit.
-
-La comparaison produit les trois bras demandés — sans reranker, reranker de
-base, reranker adapté. `delta_vs_base` peut être négatif, et le verdict le dit
-tel quel : le cahier des charges demande le résultat **même s'il est mauvais**.
-
-Suivi MLflow local (`mlruns/`), sans serveur. Si MLflow est absent, le suivi
-dégrade vers `NullTracker` et le signale — une expérience non suivie qui
-*paraît* suivie est pire qu'une expérience ouvertement non suivie.
-
-#### Limite : l'entraînement n'a pas été lancé
-
-`bge-reranker-v2-m3` fait 568 M de paramètres et ne tient déjà pas en mémoire
-à côté de BGE-M3 sur cette machine. Le code d'entraînement est écrit et testé
-(`--dry-run`, préparation des paires, refus des splits qui fuient), mais
-**aucun entraînement n'a eu lieu et aucun gain n'est revendiqué**.
-
-### Déploiement
-
-```bash
-cp .env.example .env
-docker compose up -d
-docker compose --profile jobs run --rm ingest
-```
-
-Pile complète : Qdrant, PostgreSQL, MinIO, Ollama, MLflow, API, interface, plus
-deux travaux ponctuels (ingestion, évaluation). Image non privilégiée,
-`HEALTHCHECK` sur l'API, secrets exigés par l'environnement — un secret absent
-fait échouer le démarrage plutôt que de laisser passer une valeur par défaut.
-
-CI GitHub Actions en trois travaux : lint et tests ; reconstruction complète
-corpus → index → évaluation ; recherche de secrets commités, vérification de
-`uv.lock` et audit des dépendances.
-
-> **NON VÉRIFIÉ** : aucun moteur Docker n'était disponible, et la CI n'a jamais
-> été exécutée. Les images n'ont jamais été construites ni démarrées.
-
-### Documents de livraison
-
-- [Fiche de limites](docs/FICHE_LIMITES.md) — livrable 5, dont **ce qui n'a pas
-  été mesuré**
-- [Scénario de démonstration](docs/DEMONSTRATION.md) — livrable 6
-- [Exploitation et retour arrière](docs/EXPLOITATION.md) — §11 du cahier des charges
 
 ### Contrainte mémoire mesurée
 

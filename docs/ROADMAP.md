@@ -112,7 +112,7 @@ modèle, ≤ 60 s**. Checkpointer pour reprendre après l'interruption humaine.
 compteurs appliqués par le code, horloge mise en pause pendant l'attente
 humaine, interruption réelle adossée à un checkpointer.
 
-## 8 — API, interface, authentification ✅
+## 8 — API, interface, authentification — à faire
 
 FastAPI avec OIDC/JWT et RBAC devant l'ensemble. Streamlit (évolution de
 `legacy/app_streamlit_prototype.py`) : conversation, photo, panneau des sources,
@@ -123,7 +123,7 @@ Discord/Telegram restent facultatifs.
 des cellules de notebook ✅ — question, réponse sourcée, historique MCP, ticket
 préparé, approuvé, créé une seule fois, le tout en HTTP.
 
-## 9 — Évaluation et tests d'injection ✅ (obéissance non mesurée)
+## 9 — Évaluation et tests d'injection — à faire
 
 Environ 150 scénarios selon le tableau du cahier des charges : 40 documentaires,
 30 visuels, 20 MCP, 20 sources absentes ou contradictoires, 20 contrôle d'accès,
@@ -140,7 +140,7 @@ les versions qui l'ont produit.
 réponses et le taux de citations soutenues sont rapportés `non vérifiable`,
 jamais « réussi ». Le confinement des injections, lui, est mesuré : 20/20.
 
-## 10 — Fine-tuning du reranker, MLOps, livraison ✅ (entraînement non lancé)
+## 10 — Fine-tuning du reranker, MLOps, livraison — à faire
 
 800 à 1 500 triplets (question, passage pertinent, négatif difficile) — les
 négatifs difficiles doivent provenir de la **même famille d'équipements**, sinon
