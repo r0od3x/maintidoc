@@ -8,7 +8,6 @@ $env:OLLAMA_MODELS = "D:\ollama\models"
 # qwen2.5vl:3b tient dans les 4 Go de VRAM (29/37 couches sur GPU, ~26 t/s).
 # Le 7b n'y place que 2 couches sur 29 et tombe a ~3 t/s.
 $env:MAINTIDOC_VLM_MODEL = "qwen2.5vl:3b"
-$env:MAINTIDOC_MAX_PROCESSING_SECONDS = "600"
 
 Set-Location -Path $PSScriptRoot
 
